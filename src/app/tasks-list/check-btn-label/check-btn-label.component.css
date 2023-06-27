@@ -1,0 +1,10 @@
+input:checked + label {
+    color: red;
+    text-decoration: line-through;
+}
+
+.checkbox-label-container{
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+}

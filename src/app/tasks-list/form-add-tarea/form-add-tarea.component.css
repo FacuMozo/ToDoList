@@ -1,0 +1,17 @@
+.formRow{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0px;
+    height: 50px;
+    margin: 10px 0px;
+    align-items: center;
+    text-align: center;
+}
+
+app-text-input{
+    width: 80%;
+}
+
+app-add-button{
+    width: 20%;
+}
