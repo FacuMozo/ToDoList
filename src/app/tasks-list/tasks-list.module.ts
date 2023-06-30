@@ -5,6 +5,7 @@ import { FormAddTareaComponent } from './form-add-tarea/form-add-tarea.component
 import { CheckBtnLabelComponent } from './check-btn-label/check-btn-label.component';
 import { TasksListComponent } from './tasks-list.component';
 import { SharedModule } from '../shared/shared.module';
+import { ListComponent } from './list/list.component';
 
 
 
@@ -14,6 +15,7 @@ import { SharedModule } from '../shared/shared.module';
     FormAddTareaComponent,
     CheckBtnLabelComponent,
     TasksListComponent,
+    ListComponent,
   ],
   imports: [
     CommonModule,
