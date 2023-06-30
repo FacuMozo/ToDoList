@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-tarea',
@@ -9,5 +9,13 @@ export class TareaComponent {
 
 
   @Input() task: string = '';
+
+  @Output() trashBtnEvent = new EventEmitter<boolean>();
+
+
+  deleteTask(){    
+    this.trashBtnEvent.emit(true);
+  }
+
     
 }

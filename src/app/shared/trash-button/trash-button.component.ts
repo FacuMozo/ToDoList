@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-trash-button',
@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
 })
 export class TrashButtonComponent {
 
+  @Output() trashBtnEvent = new EventEmitter<boolean>();
+
 
   deleteEvent(){
-    console.log("Delete event");
-    
+    console.log("Delete event 1");
+    this.trashBtnEvent.emit(true);
   }
 }

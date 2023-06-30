@@ -13,6 +13,14 @@ export class TasksListComponent {
   newTasks: string[] = [];
 
   addTask(newTask : string){
-    this.newTasks.push(newTask);
+    this.taskList.push(newTask);
+  }
+
+  deleteTask(deleteTask :any){
+    console.log("delete"+ deleteTask.value)
+    const index = this.taskList.indexOf(deleteTask, 0);
+    if (index > -1) {
+      this.taskList.splice(index, 1);
+    }
   }
 }
