@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-check-btn-label',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./check-btn-label.component.css']
 })
 export class CheckBtnLabelComponent {
+
+  @Input() task: string = '';
+
 
 }

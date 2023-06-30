@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class TrashButtonComponent {
 
+
+  deleteEvent(){
+    console.log("Delete event");
+    
+  }
 }

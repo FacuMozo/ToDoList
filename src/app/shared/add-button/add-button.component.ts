@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-add-button',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AddButtonComponent {
 
+
+  @Output() addButtonEvent = new EventEmitter<boolean>();
+
+  addButtonAction(){
+    this.addButtonEvent.emit(true);
+  }
 }

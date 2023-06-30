@@ -2,12 +2,14 @@
 <div style="background-color: whitesmoke;">
   <div class="table">
     
-      <app-form-add-tarea></app-form-add-tarea>
-    
-      <app-tarea></app-tarea>
-      <app-tarea></app-tarea>
-      <app-tarea></app-tarea>
-      <app-tarea></app-tarea>
+      <app-form-add-tarea (addTareaEvent)="addTask($event)"></app-form-add-tarea>
+
+      <label> {{newTasks.toString()}}</label>
+      <app-tarea [task]="taskList[0]"></app-tarea>
+      <app-tarea [task]="taskList[1]"></app-tarea>
+      <app-tarea [task]="taskList[2]"></app-tarea>
+      <app-tarea [task]="taskList[3]"></app-tarea>
+
     
   </div>
 </div>

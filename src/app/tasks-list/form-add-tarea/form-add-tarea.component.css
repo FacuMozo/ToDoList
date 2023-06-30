@@ -15,3 +15,16 @@ app-text-input{
 app-add-button{
     width: 20%;
 }
+
+.add-button {
+    padding:  0px;
+    width: 15%;
+    height: 40px;
+    margin-left: 2px;
+}
+.input-text {
+    padding: 0px;
+    /* margin-right: 2.5%; */
+    height: 40px;
+    width: 80%;
+}
