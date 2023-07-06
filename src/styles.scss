@@ -4,3 +4,28 @@ label,h1,input {
     font-family: 'Open Sans', sans-serif;
     
 }
+
+// Definir las variables de color para cada tema
+$negro: #222222;
+$negro50: #222222;
+$negro10: #222222;
+$blanco: #FFFFFF;
+$blanco50: #FFFFFF;
+$blanco10: #FFFFFF;
+
+/* Dark-mode */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: white;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+  }
+}
+
+label,h1,input {
+  font-family: 'Open Sans', sans-serif;
+    
+}

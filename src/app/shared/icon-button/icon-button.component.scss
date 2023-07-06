@@ -6,8 +6,16 @@ button {
     margin-left: 2px;
     position: relative;
     background: transparent;
-    border-color: white;
     border-radius: 4px;
+    @media (prefers-color-scheme: light) {
+        border-color: black;    
+    }
+    @media (prefers-color-scheme: dark) {        
+        border-color: white;
+        img{
+            filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(200deg) brightness(107%) contrast(101%);
+        }
+    }
 }
 
 button img {
@@ -17,4 +25,17 @@ button img {
     position: absolute;
     left: calc(50% - 20px);
     top: calc(50% - 20px);
+
+
+    @media (prefers-color-scheme: light) {
+        svg {
+            fill: black;
+        }
+    }
+    @media (prefers-color-scheme: dark) {        
+        svg{
+            fill: white;
+        }
+    }
+    background: transparent;
 }

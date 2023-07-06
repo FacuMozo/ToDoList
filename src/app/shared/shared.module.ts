@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AddButtonComponent } from './add-button/add-button.component';
-import { TrashButtonComponent } from './trash-button/trash-button.component';
 import { TextInputComponent } from './text-input/text-input.component';
+import { IconButtonComponent } from './icon-button/icon-button.component';
 
 
 
 @NgModule({
   declarations: [
     AddButtonComponent,
-    TrashButtonComponent,
-    TextInputComponent
+    TextInputComponent,
+    IconButtonComponent
   ],
   imports: [
     CommonModule
   ],
   exports:[
+    IconButtonComponent,
     AddButtonComponent,
-    TrashButtonComponent,
     TextInputComponent
   ]
 })
