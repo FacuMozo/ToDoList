@@ -1,0 +1,32 @@
+.formRow{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0px;
+    height: 52px;
+    margin: 10px 0px;
+    align-items: center;
+    text-align: center;
+    row-gap: 8px;
+    background-color: lightslategray;
+}
+
+app-text-input{
+    width: 80%;
+}
+
+app-icon-button{
+    width: 20%;
+}
+
+.add-button {
+    padding:  0px;
+    width: 15%;
+    height: 40px;
+    margin-left: 2px;
+}
+.input-text {
+    padding: 0px;
+    /* margin-right: 2.5%; */
+    height: 40px;
+    width: 80%;
+}
