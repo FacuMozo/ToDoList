@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-text-input',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class TextInputComponent {
 
+  @Output() textInputEvent = new EventEmitter<string>();
+
+  updateInputText(textInput: string){
+    this.textInputEvent.emit(textInput); 
+  }
 }

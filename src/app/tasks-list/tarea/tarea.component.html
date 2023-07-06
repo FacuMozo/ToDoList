@@ -1,6 +1,7 @@
 
 
 <div class="row">
-    <app-check-btn-label></app-check-btn-label>
-    <app-trash-button></app-trash-button>
+    <app-check-btn (checkBtnEvent)="checkEvent($event)" ></app-check-btn>
+    <app-label [task]="task" [tachadoBoolan]="tachado"></app-label>
+    <app-trash-button (trashBtnEvent)="deleteTask()"></app-trash-button>
 </div>

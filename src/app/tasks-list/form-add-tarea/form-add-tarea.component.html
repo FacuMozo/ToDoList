@@ -1,4 +1,6 @@
 <div class="formRow">
-    <app-text-input></app-text-input>
-    <app-add-button></app-add-button>
+    
+    <app-text-input (textInputEvent)="updateInputText($event)"></app-text-input>
+    <app-add-button (addButtonEvent)="addNewTask()"></app-add-button>
+    
 </div>
