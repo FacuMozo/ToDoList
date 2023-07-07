@@ -1,13 +1,13 @@
 <meta charset="UTF-8">
-<div style="background-color: whitesmoke;">
+<div >
   <div class="table">
     
-      <app-form-add-tarea></app-form-add-tarea>
-    
-      <app-tarea></app-tarea>
-      <app-tarea></app-tarea>
-      <app-tarea></app-tarea>
-      <app-tarea></app-tarea>
+    <app-form-add-tarea (addTareaEvent)="addTask($event)"></app-form-add-tarea>
+    <ul>
+      <li *ngFor="let task of taskList; index as i;"     >
+        <app-tarea [task]="task" (trashBtnEvent)="deleteTask(i)" ></app-tarea>
+      </li>
+    </ul>
     
   </div>
 </div>

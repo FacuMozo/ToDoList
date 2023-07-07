@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-tarea',
@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./tarea.component.scss']
 })
 export class TareaComponent {
-  trashButtonIcon= "trash";
+  
+  @Input() task: string = '';
+  tachado: boolean = false;
+
+  @Output() trashBtnEvent = new EventEmitter<boolean>();
+
+
+  deleteTask(){    
+    console.log("tareadeltetask");
+    this.trashBtnEvent.emit(true);
+  }
+
+  checkEvent(value : boolean){
+    this.tachado = value;
+  }
+
+
 }

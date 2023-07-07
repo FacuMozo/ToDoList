@@ -1,4 +1,16 @@
+
+@import '../../../variables';
+
 .tachado {
-    text-decoration: line-through;
-    color: red;
-  }
+    text-decoration: line-through;  
+}
+
+label{
+    @media (prefers-color-scheme: light) {
+        color: $negro;
+    }
+    @media (prefers-color-scheme: dark) {        
+        color: $blanco;
+    }
+}
+

@@ -1,11 +1,24 @@
+@import '../../../variables';
+
 .row{
     display: flex;
+    max-width: 512px;
     flex-flow: row;
-    border: 1px solid black;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 10px;
+    margin: 8px 0px;
+    padding: 8px;
     justify-content: space-between;
     align-items: center;
-    column-gap: 5px;
+    column-gap: 8px;
+    border-radius: 4px;
+    
+    @media (prefers-color-scheme: light) {
+        background-color: $negro10;
+    }
+    @media (prefers-color-scheme: dark) {        
+        background-color: $blanco10;
+    }
+
+    app-label{
+        flex-grow: 1;
+    }
 }

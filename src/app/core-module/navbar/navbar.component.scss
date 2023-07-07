@@ -1,26 +1,41 @@
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
+@import '../../../variables';
 
-li {
-  float: left;
-
-  h1 {
-    display: block;
-    text-align: left;
-    padding: 10px 10px;
-    margin: 0px;
-    font-family: "Roboto", sans-serif;
-
+.header{
+  max-width: 512px;
+  display: flex;
+  flex-flow: row;
+  justify-content: left;
+  ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
     @media (prefers-color-scheme: light) {
-      color: black;
+      background-color: $blanco;
     }
-    @media (prefers-color-scheme: dark) {
-      color: white;
+    @media (prefers-color-scheme: dark) {        
+      background-color: $negro;
+    }
+  }
+  
+  li {
+  
+    h1 {
+      
+      text-align: left;
+      padding: 8px 8px;
+      margin: 0px;
+      font-family: "Roboto", sans-serif;
+      @media (prefers-color-scheme: light) {
+        color: $negro;
+      }
+      @media (prefers-color-scheme: dark) {        
+        color: $blanco;
+      }
     }
   }
 }
+
+

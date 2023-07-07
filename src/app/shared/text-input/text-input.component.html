@@ -1,2 +1,2 @@
 
-    <input class="input-text" type="text" placeholder="Tarea" >
+    <input class="input-text" type="text" placeholder="Tarea" #textInput (keyup)="updateInputText(textInput.value)">

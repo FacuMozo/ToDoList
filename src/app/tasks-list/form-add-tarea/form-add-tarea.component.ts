@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-form-add-tarea',
@@ -8,4 +8,19 @@ import { Component } from '@angular/core';
 export class FormAddTareaComponent {
 
   icon="check";
+
+  newTask: string = '';
+
+  @Output() addTareaEvent = new EventEmitter<string>();
+
+  addNewTask() {
+    if (this.newTask != ''){
+      this.addTareaEvent.emit(this.newTask);
+    }
+    
+  }
+
+  updateInputText(textInput: string){
+    this.newTask = textInput;
+  }
 }
