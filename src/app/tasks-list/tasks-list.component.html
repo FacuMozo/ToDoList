@@ -5,7 +5,7 @@
     <app-form-add-tarea (addTareaEvent)="addTask($event)"></app-form-add-tarea>
     <ul>
       <li *ngFor="let task of taskList; index as i;"     >
-        <app-tarea [task]="task" (trashBtnEvent)="deleteTask(i)" ></app-tarea>
+        <app-tarea [task]="task" (trashBtnEvent)="deleteTask($event)" ></app-tarea>
       </li>
     </ul>
     

@@ -1,5 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+import { task } from '../task.model';
+
+
 @Component({
   selector: 'app-tarea',
   templateUrl: './tarea.component.html',
@@ -7,20 +10,20 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class TareaComponent {
   
-  @Input() task: string = '';
-  tachado: boolean = false;
+  @Input() task!: task;
+  
 
-  @Output() trashBtnEvent = new EventEmitter<boolean>();
+  @Output() trashBtnEvent = new EventEmitter<number>();
 
 
   deleteTask(){    
     console.log("tareadeltetask");
-    this.trashBtnEvent.emit(true);
+    this.trashBtnEvent.emit(this.task.getId());
   }
 
   checkEvent(value : boolean){
-    this.tachado = value;
+    this.task.setComplete(value);
   }
 
-
 }
+

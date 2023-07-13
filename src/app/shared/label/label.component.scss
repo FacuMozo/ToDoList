@@ -7,10 +7,10 @@
 
 label{
     @media (prefers-color-scheme: light) {
-        color: $negro;
+        color: var(--negro);
     }
     @media (prefers-color-scheme: dark) {        
-        color: $blanco;
+        color: var(--blanco);
     }
 }
 

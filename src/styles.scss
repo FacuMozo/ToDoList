@@ -4,9 +4,12 @@
 /* You can add global styles to this file, and also import other style files */
 
 label,h1,input {
- 
-    font-family: "Roboto", sans-serif;
-    
+  
+  font-family: "Roboto", sans-serif;
+  
+}
+:root{
+  font-size: 16px;
 }
 
 // Definir las variables de color para cada tema
@@ -14,17 +17,27 @@ label,h1,input {
 
 /* Dark-mode */
 @media (prefers-color-scheme: light) {
+  :root { 
+    --backgroundcolor : --negro;
+    --iconColor :var(--negro);
+    --textColor : var(--negro);
+    --borderColor : var(--negro); 
+    --elementBackgroundColor : var(--blanco10); 
+    
+  }
   body {
-    background-color: $blanco;
+    background-color: var(--backgroundcolor);
   }
 }
 @media (prefers-color-scheme: dark) {
-  body {
-    background-color: $negro;
+  :root {
+    --backgroundcolor :var(--negro);
+    --iconColor : var(--blanco);
+    --textColor : var(--blanco);
+    --borderColor : var(--blanco); 
+    --elementBackgroundColor : var(--blanco50); 
   }
-}
-
-label,h1,input {
-  font-family: 'Open Sans', sans-serif;
-    
+  body {
+    background-color: var(--negro);
+  }
 }
