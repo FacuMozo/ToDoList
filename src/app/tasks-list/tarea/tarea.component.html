@@ -3,6 +3,7 @@
 <div class="row">
     <app-check-button (checkBtnEvent)="checkEvent($event)" ></app-check-button>
     <app-label [task]="task.getTitle()" [tachadoBoolan]="task.getComplete()"></app-label>
+    <!-- <app-label [task]="task.title" [tachadoBoolan]="task.complete"></app-label> -->
 
 
     <app-icon-button [icon]="'notes'" ></app-icon-button>

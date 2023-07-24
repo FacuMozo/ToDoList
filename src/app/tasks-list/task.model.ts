@@ -1,24 +1,38 @@
+import { last } from "rxjs";
+
 export class task {
-  private static lastId: number = 0;
-  private _id: number ;
-    private title: string ;
+    private static lastId: number = 0;
+    _id: number ;
+    public title: string ;
     description: string ;
-    private complete: boolean;
+    complete: boolean;
     
-    created_at : Date;
-    private updated_at: Date ;
+    // created_at : Date;
+    // updated_at: Date ;
     
     constructor(title:string,description:string,
-      complete: boolean, createDate:Date, updateDate: Date){
-        this._id = task.lastId;
-        task.lastId++;
+      complete: boolean,_id : number
+      // , createDate:Date, updateDate: Date
+      ){
+        if ( _id != -1){
+          this._id = _id;
+        }else{
+          this._id = task.lastId;
+          task.lastId++;
+        }
+
         this.title = title;
         this.description = description;
           this.complete = complete;
-          this.created_at = createDate;
-          this.updated_at= updateDate;
+          // this.created_at = createDate;
+          // this.updated_at= updateDate;
     }
-    
+
+  
+    public static setLastId(last : number){
+      task.lastId = ++last;
+      console.log("SET LAST ID TO "+ last);     
+    }
 
     
     public getId(): number {
@@ -40,15 +54,19 @@ export class task {
         this.complete = value;
     }
     
-    public getUpdated_at(): Date {
-      return this.updated_at;
+    // public getUpdated_at(): Date {
+    //   return this.updated_at;
+    // }
+    // public setUpdated_at(value: Date) {
+    //   this.updated_at = value;
+    // }
+  
+  
+    toString(): string{
+      return "TASKKKK";
     }
-    public setUpdated_at(value: Date) {
-      this.updated_at = value;
-    }
-  
-  
-  
   
     
   }
+
+  export default task;
