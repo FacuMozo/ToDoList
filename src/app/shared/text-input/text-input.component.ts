@@ -12,5 +12,4 @@ export class TextInputComponent {
   updateInputText(textInput: string){
     this.textInputEvent.emit(textInput); 
   }
-
 }

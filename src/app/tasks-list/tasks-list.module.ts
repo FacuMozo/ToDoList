@@ -14,7 +14,7 @@ import { TaskListService } from '../services/task-list.service';
     TareaComponent,
     FormAddTareaComponent,
     CheckBtnLabelComponent,
-    TasksListComponent,
+    TasksListComponent
   ],
   imports: [
     CommonModule,
