@@ -15,6 +15,13 @@ ul {
   @media (prefers-color-scheme: dark) {        
     background-color: var(--negro);
   }
+  @media (max-width: 560px)
+  {
+    display: flex;
+    width: calc(100vw - 1rem);
+    justify-content: space-between;
+
+  }
   li {
   
     h1 {

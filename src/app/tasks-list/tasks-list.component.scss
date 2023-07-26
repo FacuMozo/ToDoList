@@ -17,3 +17,15 @@ ul{
     border-radius: 0.25rem;
     margin-top: 0.5rem;
 }
+
+.table{
+    
+    flex-direction: column;
+    display: flex;
+    width: 32rem;
+    @media (max-width: 560px)
+    {
+        width: calc(100vw - 1rem);
+    }
+
+}
