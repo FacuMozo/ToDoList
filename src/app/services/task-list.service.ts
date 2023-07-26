@@ -49,7 +49,6 @@ export class TaskListService {
   setTaskList(){
   
     this.localStorageService.saveData("tasks" , JSON.stringify(this.taskList));
-    console.log("JSON STRINGIFY TASKLIST: "+JSON.stringify(this.taskList))
     localStorage.setItem("tasks", JSON.stringify(this.taskList));
     
   }
@@ -68,9 +67,16 @@ export class TaskListService {
     this.setTaskList();
   }
 
-  toString(): string {
-    
-    
-    return '{ }  '
+  editTask(){
+
+  }
+ 
+  getTaskById(id: number): task | null {
+    for (let i = 0 ; i< this.taskList.length ; i++){
+      if (this.taskList[i].getId() == id){
+        return this.taskList[i];
+      }
+    }
+    return null;
   }
 }
