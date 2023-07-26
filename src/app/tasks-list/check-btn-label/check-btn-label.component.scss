@@ -11,7 +11,7 @@ input:checked + label {
 
     label{
         font-family: "Roboto", sans-serif;
-        font-size: 24px;
+        font-size: 1.5rem;
         
         @media (prefers-color-scheme: light) {
             color: var(--negro);

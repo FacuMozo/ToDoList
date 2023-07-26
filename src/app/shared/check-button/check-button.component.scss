@@ -1,9 +1,12 @@
 input[type="checkbox"] {
 	
-	width: 26px;
-	height: 26px;
+	width: 1.5rem;
+	height: 1.5rem;
 	float: left;
-	margin: 0.5em 0.5em 0 0;
+	padding: 0.5rem 0.5rem ;
 	border: 2px solid #ccc;
 	background: #fff;
+
+	flex-grow: 0;
+	flex-shrink: 0;
 }

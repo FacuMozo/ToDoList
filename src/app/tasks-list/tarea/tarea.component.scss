@@ -2,7 +2,7 @@
 
 .row{
     display: flex;
-    max-width: 512px;
+    max-width: 32rem;
     flex-flow: row;
     margin: 0.5rem 0px;
     padding: 0.5rem;
@@ -10,6 +10,7 @@
     align-items: center;
     column-gap: 0.5rem;
     border-radius: 0.25rem;
+    
     
     @media (prefers-color-scheme: light) {
         background-color: var(--negro10);
@@ -19,6 +20,11 @@
     }
 
     app-label{
-        flex-grow: 1;
+        flex: 1;
+        display: flex;
+        flex-grow: 3;
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: auto;
     }
 }

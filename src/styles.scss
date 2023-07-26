@@ -11,6 +11,9 @@ label,h1,input {
 :root{
   font-size: 16px;
 }
+*{
+  box-sizing: border-box
+}
 
 // Definir las variables de color para cada tema
 
@@ -35,7 +38,7 @@ label,h1,input {
     --iconColor : var(--blanco);
     --textColor : var(--blanco);
     --borderColor : var(--blanco); 
-    --elementBackgroundColor : var(--blanco50); 
+    --elementBackgroundColor : var(--negro10); 
   }
   body {
     background-color: var(--negro);

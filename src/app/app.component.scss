@@ -1,4 +1,22 @@
 .navbar{
-    max-width: 512px;
+    max-width: 32rem;
     margin: auto;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    
+    background: var(--backgroundcolor);
+}
+app-tasks-list{
+    flex-direction: column;
+    display: flex;
+    width: 32rem;
+    @media (max-width: 560px)
+    {
+        width: 100%;
+    }
 }

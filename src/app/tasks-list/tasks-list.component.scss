@@ -1,9 +1,9 @@
-.table{
-    margin-left: auto;
-    margin-right: auto; 
-    place-content: center;
-    margin: 0 auto;
-    width: 512px;
+
+app-form-add-tarea{
+    position: sticky;
+    top: 0.5rem;
+    backdrop-filter: blur(5px) saturate(150%);
+    background-color: var(--elementBackgroundColor);
 }
 
 ul{
