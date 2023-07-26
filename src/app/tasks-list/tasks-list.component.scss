@@ -1,0 +1,31 @@
+
+
+app-form-add-tarea{
+    position: sticky;
+    top: 0.5rem;
+    backdrop-filter: blur(5px) saturate(150%);
+    background-color: var(--elementBackgroundColor);
+}
+
+ul{
+    list-style:none;
+    padding: 0;
+    margin: 0;
+}
+.divider{
+    border: 0.125rem solid var(--blanco50);
+    border-radius: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+.table{
+    
+    flex-direction: column;
+    display: flex;
+    width: 32rem;
+    @media (max-width: 560px)
+    {
+        width: calc(100vw - 1rem);
+    }
+
+}

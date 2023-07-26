@@ -3,11 +3,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'app-form-add-tarea',
   templateUrl: './form-add-tarea.component.html',
-  styleUrls: ['./form-add-tarea.component.css']
+  styleUrls: ['./form-add-tarea.component.scss']
 })
 export class FormAddTareaComponent {
 
-  listaTareasAdd: string[] = [];
+  icon="check";
 
   newTask: string = '';
 
@@ -15,7 +15,6 @@ export class FormAddTareaComponent {
 
   addNewTask() {
     if (this.newTask != ''){
-      this.listaTareasAdd.push(this.newTask);
       this.addTareaEvent.emit(this.newTask);
     }
     
@@ -24,5 +23,4 @@ export class FormAddTareaComponent {
   updateInputText(textInput: string){
     this.newTask = textInput;
   }
-
 }

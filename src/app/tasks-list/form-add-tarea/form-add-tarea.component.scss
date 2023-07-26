@@ -1,0 +1,38 @@
+
+.formRow{
+    // z-index: 9999;
+    // align-self: flex-start;
+    
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;    
+    position: -webkit-sticky;
+     /* Posición inicial */
+    
+    height: 4rem;
+    // width: 32rem;
+    // margin: 0px;
+    
+    column-gap: 0.5rem;
+    
+    border-radius: 0.25rem;
+    
+    &.fixed {
+        position: fixed;
+        top: 0;
+        border-color: red;
+        border: 5px;
+    }
+
+    @media (prefers-color-scheme: light) {
+        background-color: var(--negro10);
+    }
+    @media (prefers-color-scheme: dark) {
+        background-color: var(--blanco10);
+    }
+}
+
+app-text-input{
+    flex-grow: 1;
+}
+

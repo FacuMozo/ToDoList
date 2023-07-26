@@ -1,7 +1,12 @@
 
 
 <div class="row">
-    <app-check-btn (checkBtnEvent)="checkEvent($event)" ></app-check-btn>
-    <app-label [task]="task" [tachadoBoolan]="tachado"></app-label>
-    <app-trash-button (trashBtnEvent)="deleteTask()"></app-trash-button>
+    <app-check-button (checkBtnEvent)="checkEvent($event)" ></app-check-button>
+    <app-label [task]="task.getTitle()" [tachadoBoolan]="task.getComplete()"></app-label>
+    <!-- <app-label [task]="task.title" [tachadoBoolan]="task.complete"></app-label> -->
+
+
+    <app-icon-button [icon]="'notes'" ></app-icon-button>
+    <app-icon-button [icon]="'share'" ></app-icon-button>
+    <app-icon-button [icon]="'trash'" (buttonEvent)="deleteTask()" ></app-icon-button>
 </div>

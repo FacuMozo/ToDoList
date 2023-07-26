@@ -1,24 +1,36 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { task } from './task.model';
+import { TaskListService } from '../services/task-list.service';
 
 @Component({
   selector: 'app-tasks-list',
   templateUrl: './tasks-list.component.html',
-  styleUrls: ['./tasks-list.component.css']
+  styleUrls: ['./tasks-list.component.scss']
 })
-export class TasksListComponent {
+export class TasksListComponent implements OnInit{
 
+  taskList!: task[];
+  taskListService : TaskListService;
 
-  taskList: string[] = ['Tarea 1','Tarea 2', 'Tarea 3', 'Tarea 4'];
+  constructor(taskListService : TaskListService ){
+    this.taskListService = taskListService;
+  }
 
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.taskList = this.taskListService.getTaskList();
+  }
+  
   addTask(newTask : string){
-    this.taskList.unshift(newTask);
+    this.taskListService.addTask(newTask);
+    this.taskList = this.taskListService.getTaskList();   
   }
-
-  deleteTask(deleteTask :any){
-    console.log("delete"+ deleteTask.value)
-    const index = this.taskList.indexOf(deleteTask, 0);
-    if (index > -1) {
-      this.taskList.splice(index, 1);
-    }
+  
+  deleteTask(deleteTaskId :number){
+    this.taskListService.deleteTask(deleteTaskId);
+    this.taskList = this.taskListService.getTaskList();
   }
+  
 }
+ 

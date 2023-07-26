@@ -1,30 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AddButtonComponent } from './add-button/add-button.component';
-import { TrashButtonComponent } from './trash-button/trash-button.component';
 import { TextInputComponent } from './text-input/text-input.component';
-import { CheckBtnComponent } from './check-btn/check-btn.component';
+import { IconButtonComponent } from './icon-button/icon-button.component';
 import { LabelComponent } from './label/label.component';
+import { CheckButtonComponent } from './check-button/check-button.component';
+import { DividerComponent } from './divider/divider.component';
 
 
 
 @NgModule({
   declarations: [
-    AddButtonComponent,
-    TrashButtonComponent,
     TextInputComponent,
-    CheckBtnComponent,
-    LabelComponent
+    IconButtonComponent,
+    LabelComponent,
+    CheckButtonComponent,
+    DividerComponent
   ],
   imports: [
     CommonModule
   ],
   exports:[
-    AddButtonComponent,
-    TrashButtonComponent,
+    IconButtonComponent,
     TextInputComponent,
-    CheckBtnComponent,
-    LabelComponent
+    LabelComponent,
+    CheckButtonComponent
   ]
 })
 export class SharedModule { }

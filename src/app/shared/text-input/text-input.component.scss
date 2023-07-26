@@ -1,0 +1,16 @@
+input {
+  height: 3rem;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+
+
+  @media (prefers-color-scheme: light) {
+    color: black;    
+  }
+  @media (prefers-color-scheme: dark) {        
+    color: white;
+  }
+}

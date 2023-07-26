@@ -1,0 +1,13 @@
+// .navbar{
+//     max-width: 32rem;
+//     margin: auto;
+// }
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    
+    background: var(--backgroundcolor);
+}

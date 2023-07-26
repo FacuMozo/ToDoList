@@ -1,26 +1,28 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+import { task } from '../task.model';
+
+
 @Component({
   selector: 'app-tarea',
   templateUrl: './tarea.component.html',
-  styleUrls: ['./tarea.component.css']
+  styleUrls: ['./tarea.component.scss']
 })
 export class TareaComponent {
+  
+  @Input() task!: task;
+  
 
-
-  @Input() task: string = '';
-  tachado: boolean = false;
-
-  @Output() trashBtnEvent = new EventEmitter<boolean>();
+  @Output() trashBtnEvent = new EventEmitter<number>();
 
 
   deleteTask(){    
-    this.trashBtnEvent.emit(true);
+    console.log("tareadeltetask");
+    this.trashBtnEvent.emit(this.task.getId());
   }
 
   checkEvent(value : boolean){
-    this.tachado = value;
+    this.task.setComplete(value);
   }
 
-    
 }
