@@ -4,6 +4,6 @@
             <h1> Lista de tareas App </h1>
         </li>
         <li>
-            <app-icon-button [icon]="'fullscreen'"></app-icon-button>
+            <app-icon-button [icon]="icon" (buttonEvent)="toggleFullscreen()"></app-icon-button>
         </li>
     </ul>
