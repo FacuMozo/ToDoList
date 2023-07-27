@@ -4,7 +4,6 @@ import { TextInputComponent } from './text-input/text-input.component';
 import { IconButtonComponent } from './icon-button/icon-button.component';
 import { LabelComponent } from './label/label.component';
 import { CheckButtonComponent } from './check-button/check-button.component';
-import { DividerComponent } from './divider/divider.component';
 
 
 
@@ -13,8 +12,7 @@ import { DividerComponent } from './divider/divider.component';
     TextInputComponent,
     IconButtonComponent,
     LabelComponent,
-    CheckButtonComponent,
-    DividerComponent
+    CheckButtonComponent
   ],
   imports: [
     CommonModule

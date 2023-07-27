@@ -6,7 +6,7 @@
     <!-- <app-label [task]="task.title" [tachadoBoolan]="task.complete"></app-label> -->
 
 
-    <app-icon-button [icon]="'notes'" ></app-icon-button>
-    <app-icon-button [icon]="'share'" ></app-icon-button>
+    <app-icon-button [icon]="'notes'" (buttonEvent)="performCopy()"></app-icon-button>
+    <app-icon-button [icon]="'share'" (buttonEvent)="share()"></app-icon-button>
     <app-icon-button [icon]="'trash'" (buttonEvent)="deleteTask()" ></app-icon-button>
-</div>
+</div>  
