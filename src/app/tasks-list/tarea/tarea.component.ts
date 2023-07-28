@@ -15,14 +15,16 @@ export class TareaComponent {
 
   @Output() trashBtnEvent = new EventEmitter<number>();
 
+  @Output() checkBtnEvent = new EventEmitter<number>();
+
 
   deleteTask(){    
-    console.log("tareadeltetask");
     this.trashBtnEvent.emit(this.task.getId());
   }
-
+  
   checkEvent(value : boolean){
-    this.task.setComplete(value);
+    // this.task.setComplete(value);
+    this.checkBtnEvent.emit(this.task.getId());
   }
 
   share() {
@@ -41,30 +43,13 @@ export class TareaComponent {
   }
 
 
-
   performCopy() {
     var selection = window.getSelection();
-  
-    
+
       navigator.clipboard.writeText(this.task.getTitle())
         .then(() => console.log('Async writeText successful, "' + this.task.getTitle()+ '" written'))
         .catch(err => console.log('Async writeText failed with error: "' + err + '"'));
-    // } else {
-    //   selection.removeAllRanges();
-    //   var range = document.createRange();
-    //   range.selectNode(this.task.getTitle());
-    //   selection.addRange(range);
-    
-    //   try {
-    //     var successful = document.execCommand('copy');
-    //     var msg = successful ? 'successful' : 'unsuccessful';
-    //     log('Copy email command was ' + msg);
-    //   } catch (err) {
-    //     log('execCommand Error', err);
-    //   }
-      
-    //   selection.removeAllRanges();
-    // }
+
   }
 
   

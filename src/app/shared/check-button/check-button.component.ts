@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-check-button',
@@ -9,6 +9,7 @@ export class CheckButtonComponent {
 
   @Output() checkBtnEvent = new EventEmitter<boolean>();
  
+  @Input() checked: boolean = false;
 
   checkEvent(event : any){
     this.checkBtnEvent.emit(event.target.checked);

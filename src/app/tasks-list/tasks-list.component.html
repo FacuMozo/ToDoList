@@ -4,7 +4,7 @@
   <div class="divider"></div>
   <ul>
     <li *ngFor="let task of taskList; index as i;"     >
-      <app-tarea [task]="task" (trashBtnEvent)="deleteTask($event)" ></app-tarea>
+      <app-tarea [task]="task" (trashBtnEvent)="deleteTask($event)" (checkBtnEvent)="checkTask($event)" ></app-tarea>
     </li>
   </ul>
 

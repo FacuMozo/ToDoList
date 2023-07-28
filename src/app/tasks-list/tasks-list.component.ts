@@ -31,6 +31,10 @@ export class TasksListComponent implements OnInit{
     this.taskListService.deleteTask(deleteTaskId);
     this.taskList = this.taskListService.getTaskList();
   }
+
+  checkTask(checkTaskId :number){
+    this.taskListService.toggleCompleteTask(checkTaskId);
+  }
   
 }
  

@@ -33,6 +33,9 @@ export class task {
       task.lastId = ++last;
       console.log("SET LAST ID TO "+ last);     
     }
+    public static getLastId(): number{
+      return task.lastId;
+    }
 
     
     public getId(): number {
@@ -60,10 +63,12 @@ export class task {
     // public setUpdated_at(value: Date) {
     //   this.updated_at = value;
     // }
+
+    
   
   
     toString(): string{
-      return "TASKKKK";
+      return "TASK + "+this.getTitle()+" id: "+this.getId();
     }
   
     

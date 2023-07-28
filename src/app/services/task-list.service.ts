@@ -32,10 +32,14 @@ export class TaskListService {
         taskArray.push( newTask)
       }
       this.taskList = taskArray;
+      if( task.getLastId() == 0){
+        task.setLastId(this.findLastId());
+      }
     }
     return this.taskList;
     
   }
+
   findLastId(): number{
     let max = -1;
     for (let i = 0 ; i < this.taskList.length; i++){
@@ -54,8 +58,8 @@ export class TaskListService {
   }
 
   addTask(newTask : string){
-    console.log("ADD new stask " + newTask); 
-    this.taskList.unshift(new task(newTask, "Description "+newTask, false,-1));
+
+    this.taskList.unshift(new task(newTask, "Description: "+newTask, false,-1));
     this.setTaskList();
   }
 
@@ -65,10 +69,23 @@ export class TaskListService {
       this.taskList.splice(index, 1);
     }
     this.setTaskList();
+    
+  }
+  
+  editTask(editTask: task){
+    const index  = this.taskList.findIndex((task) => task.getId() === editTask.getId());
+    if (index >= 0 && index < this.taskList.length) {
+      this.taskList[index] = editTask;
+    }
+    this.setTaskList();
   }
 
-  editTask(){
-
+  toggleCompleteTask(editTaskId : number){
+    const index  = this.taskList.findIndex((task) => task.getId() === editTaskId);
+    if (index >= 0 && index < this.taskList.length) {
+      this.taskList[index].setComplete(!this.taskList[index].getComplete());
+      this.setTaskList();
+    }
   }
  
   getTaskById(id: number): task | null {
