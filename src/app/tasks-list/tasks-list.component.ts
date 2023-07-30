@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { task } from './task.model';
+import { Task } from './task.model';
 import { TaskListService } from '../services/task-list.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { TaskListService } from '../services/task-list.service';
 })
 export class TasksListComponent implements OnInit{
 
-  taskList!: task[];
+  taskList!: Task[];
   taskListService : TaskListService;
 
   constructor(taskListService : TaskListService ){

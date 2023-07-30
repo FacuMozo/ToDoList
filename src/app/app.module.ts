@@ -7,6 +7,8 @@ import { SharedModule } from './shared/shared.module';
 import { TasksListModule } from './tasks-list/tasks-list.module';
 import { TaskListService } from './services/task-list.service';
 import { LocalStorageService } from './services/local-storage.service';
+import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { LocalStorageService } from './services/local-storage.service';
   imports: [
     BrowserModule,
     CoreModuleModule,
-    TasksListModule
+    TasksListModule,
+    AppRoutingModule,
+    AuthModule
   ],
   providers: [ 
     TaskListService,

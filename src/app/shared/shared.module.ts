@@ -4,6 +4,7 @@ import { TextInputComponent } from './text-input/text-input.component';
 import { IconButtonComponent } from './icon-button/icon-button.component';
 import { LabelComponent } from './label/label.component';
 import { CheckButtonComponent } from './check-button/check-button.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,7 +16,8 @@ import { CheckButtonComponent } from './check-button/check-button.component';
     CheckButtonComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports:[
     IconButtonComponent,

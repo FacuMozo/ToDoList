@@ -2,7 +2,7 @@
 
 <div class="row">
     <app-check-button [checked]="task.getComplete()" (checkBtnEvent)="checkEvent($event)" ></app-check-button>
-    <app-label [task]="task.getTitle()" [tachadoBoolan]="task.getComplete()"></app-label>
+    <app-label class="taskLabel" [text]="task.getTitle()" [tachadoBoolan]="task.getComplete()" routerLink="/tasks/{{task.getId()}}"> </app-label>
     <!-- <app-label [task]="task.title" [tachadoBoolan]="task.complete"></app-label> -->
 
 

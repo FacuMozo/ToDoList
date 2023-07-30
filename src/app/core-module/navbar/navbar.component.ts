@@ -17,8 +17,9 @@ export class NavbarComponent {
         this.fullscreen = !this.fullscreen;
         
         if(this.fullscreen){
-          elem.requestFullscreen();
           this.icon ="fullscreen-exit"
+          elem.requestFullscreen();
+          console.log("entro en fullscreen")
         }else{
           this.icon ="fullscreen"
           document.exitFullscreen();

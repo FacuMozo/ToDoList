@@ -1,6 +1,6 @@
 import { last } from "rxjs";
 
-export class task {
+export class Task {
     private static lastId: number = 0;
     _id: number ;
     public title: string ;
@@ -17,8 +17,8 @@ export class task {
         if ( _id != -1){
           this._id = _id;
         }else{
-          this._id = task.lastId;
-          task.lastId++;
+          this._id = Task.lastId;
+          Task.lastId++;
         }
 
         this.title = title;
@@ -30,11 +30,11 @@ export class task {
 
   
     public static setLastId(last : number){
-      task.lastId = ++last;
+      Task.lastId = ++last;
       console.log("SET LAST ID TO "+ last);     
     }
     public static getLastId(): number{
-      return task.lastId;
+      return Task.lastId;
     }
 
     
@@ -56,6 +56,12 @@ export class task {
     public setComplete(value: boolean) {
         this.complete = value;
     }
+    public getDescription(): string {
+        return this.description;
+    }
+    public setDescription(value: string) {
+        this.description= value;
+    }
     
     // public getUpdated_at(): Date {
     //   return this.updated_at;
@@ -68,10 +74,10 @@ export class task {
   
   
     toString(): string{
-      return "TASK + "+this.getTitle()+" id: "+this.getId();
+      return "<Task ID: "+this.getId()+" Task title: "+this.getTitle()+ ", "+ this.getDescription()+">";
     }
   
     
   }
 
-  export default task;
+  export default Task;

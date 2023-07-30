@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class LabelComponent {
 
-  @Input() task: string = '';
+  @Input() text: string = '';
   @Input() tachadoBoolan: boolean = false;
 
 }

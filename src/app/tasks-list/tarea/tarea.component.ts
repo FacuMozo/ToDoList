@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-import { task } from '../task.model';
+import { Task } from '../task.model';
 
 
 @Component({
@@ -10,7 +10,7 @@ import { task } from '../task.model';
 })
 export class TareaComponent {
   
-  @Input() task!: task;
+  @Input() task!: Task;
   
 
   @Output() trashBtnEvent = new EventEmitter<number>();

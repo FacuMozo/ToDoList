@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'app-text-input',
@@ -6,6 +6,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./text-input.component.scss']
 })
 export class TextInputComponent {
+
+  
+  @Input() disabled: boolean = false;
+  @Input() value: string = "";
 
   @Output() textInputEvent = new EventEmitter<string>();
 

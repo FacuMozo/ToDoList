@@ -1,14 +1,15 @@
-@import '../../../variables';
+@import '../../../../variables';
 
-.row{
+.task-detail{
     display: flex;
-    max-width: 32rem;
-    flex-flow: row;
+    width: 32rem;
+    flex-flow: column;
+    flex-wrap: wrap;
     margin: 0.5rem 0px;
-    padding: 0.5rem;
+    padding: 1rem;
     justify-content: space-between;
-    align-items: center;
-    column-gap: 0.5rem;
+    align-items: flex-start;
+    row-gap: 0.5rem;
     border-radius: 0.25rem;
     
     
@@ -27,4 +28,12 @@
         overflow-y: hidden;
         overflow-x: auto;
     }
+    
+    .row{
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+        column-gap: 0.5rem;
+    }
+
 }

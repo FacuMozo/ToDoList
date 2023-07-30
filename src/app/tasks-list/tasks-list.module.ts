@@ -5,6 +5,8 @@ import { FormAddTareaComponent } from './form-add-tarea/form-add-tarea.component
 import { TasksListComponent } from './tasks-list.component';
 import { SharedModule } from '../shared/shared.module';
 import { TaskListService } from '../services/task-list.service';
+import { RouterModule } from '@angular/router';
+import { PagesModule } from './pages/pages.module';
 
 
 
@@ -16,7 +18,8 @@ import { TaskListService } from '../services/task-list.service';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
   providers:[
     TaskListService
