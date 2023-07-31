@@ -5,11 +5,11 @@
     <p>Id: {{this.task.getId()}}</p> -->
     <div class="row">
         <app-label  [text]="'Title:'"> </app-label>
-        <app-text-input [value]="this.task.getTitle()"></app-text-input>
+        <app-text-input [value]="this.task.getTitle()" (textInputEvent)="updateTitleText($event)"></app-text-input>
     </div>
     <div class="row">
         <app-label  [text]="'Description:'"> </app-label>
-        <app-text-input [value]="this.task.getDescription()"></app-text-input>
+        <app-text-input [value]="this.task.getDescription()" (textInputEvent)="updateDescriptionText($event)"></app-text-input>
     </div>
     <div class="row">
         <app-label  [text]="'Task ID:'"> </app-label>
@@ -17,14 +17,14 @@
     </div>
     <div class="row">
         <app-label  [text]="'Completed: '"  > </app-label>
-        <app-text-input [disabled]="true" [value]="this.task.getComplete().toString()"></app-text-input>
+        <app-text-input [disabled]="true" [value]="this.task.getComplete().toString()" ></app-text-input>
     </div>
     
     
     
 
     <div class="rowButtons">
-        <app-icon-button [icon]="'edit'" (buttonEvent)="navigateEditTask()"></app-icon-button>
+        <app-icon-button [icon]="'save'" (buttonEvent)="editTask()"></app-icon-button>
         <app-icon-button [icon]="'home'" (buttonEvent)="navigateHome()"></app-icon-button>
 
     </div>

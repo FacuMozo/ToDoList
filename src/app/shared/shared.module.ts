@@ -5,6 +5,7 @@ import { IconButtonComponent } from './icon-button/icon-button.component';
 import { LabelComponent } from './label/label.component';
 import { CheckButtonComponent } from './check-button/check-button.component';
 import { RouterModule } from '@angular/router';
+import { DividerComponent } from './divider/divider.component';
 
 
 
@@ -13,7 +14,8 @@ import { RouterModule } from '@angular/router';
     TextInputComponent,
     IconButtonComponent,
     LabelComponent,
-    CheckButtonComponent
+    CheckButtonComponent,
+    DividerComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { RouterModule } from '@angular/router';
     IconButtonComponent,
     TextInputComponent,
     LabelComponent,
-    CheckButtonComponent
+    CheckButtonComponent,
+    DividerComponent
   ]
 })
 export class SharedModule { }

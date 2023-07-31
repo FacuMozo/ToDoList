@@ -1,1 +1,11 @@
-<p>task-list works!</p>
+<div class="table">
+  
+    <app-form-add-tarea (addTareaEvent)="addTask($event)"></app-form-add-tarea>
+    <app-divider></app-divider>
+    <ul>
+      <li *ngFor="let task of taskList; index as i;"     >
+        <app-tarea [task]="task" (trashBtnEvent)="deleteTask($event)" (checkBtnEvent)="checkTask($event)" ></app-tarea>
+      </li>
+    </ul>
+  
+</div>

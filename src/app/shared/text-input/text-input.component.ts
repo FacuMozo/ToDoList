@@ -10,6 +10,7 @@ export class TextInputComponent {
   
   @Input() disabled: boolean = false;
   @Input() value: string = "";
+  @Input() placeholder: string = "";
 
   @Output() textInputEvent = new EventEmitter<string>();
 

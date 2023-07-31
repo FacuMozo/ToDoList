@@ -6,6 +6,7 @@ import { EditTaskComponent } from './edit-task/edit-task.component';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { TaskListComponent } from './task-list/task-list.component';
+import { TasksListModule } from '../tasks-list.module';
 
 
 
@@ -19,8 +20,8 @@ import { TaskListComponent } from './task-list/task-list.component';
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule
-    
+    SharedModule,
+    TasksListModule
   ]
 })
 export class PagesModule { }

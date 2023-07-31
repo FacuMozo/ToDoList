@@ -12,11 +12,15 @@ button {
     @media (prefers-color-scheme: light) {
         border-color: black;    
     }
-    @media (prefers-color-scheme: dark) {        
+    @media (prefers-color-scheme: dark) {  
+        
         border-color: white;
         img{
             filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(200deg) brightness(107%) contrast(101%);
         }
+    }
+    &:active{
+        border-color: rgba(172, 255, 47, 0.529);
     }
 }
 

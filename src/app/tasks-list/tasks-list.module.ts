@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { TaskListService } from '../services/task-list.service';
 import { RouterModule } from '@angular/router';
 import { PagesModule } from './pages/pages.module';
+import { CoreModuleModule } from '../core-module/core-module.module';
 
 
 
@@ -19,13 +20,16 @@ import { PagesModule } from './pages/pages.module';
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    CoreModuleModule
   ],
   providers:[
     TaskListService
   ],
   exports:[
-    TasksListComponent
+    TasksListComponent,
+    FormAddTareaComponent,
+    TareaComponent
   ]
 })
 export class TasksListModule { }

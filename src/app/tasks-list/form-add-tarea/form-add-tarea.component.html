@@ -1,4 +1,4 @@
 <div class="formRow">
-    <app-text-input (textInputEvent)="updateInputText($event)"></app-text-input>
+    <app-text-input [placeholder]="' Tarea'" (textInputEvent)="updateInputText($event)"></app-text-input>
     <app-icon-button [icon]="icon" (buttonEvent)="addNewTask()"></app-icon-button>
 </div>

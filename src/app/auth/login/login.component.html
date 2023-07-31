@@ -1,54 +1,21 @@
-<main class="animate__animated animate__backInDown">
+<div class="container">
 
-
-
-    <div class="container">
-
-
-
-        <div class="card-body">
-            <h2>Login</h2>
-            <h3>Ingrese su usuario y contraseña para ingresar</h3>
-
-            <!--Formulario de Inicio Sesion -->
-            <!-- <form class="row g-3 needs-validation" autocomplete="off" (submit)="login()"> -->
-
-                
-                <label>Email</label>
-
-                <input type="email" formControlName="email" placeholder="Ingrese su email" class="form-control"
-                        id="yourUsername" required>
-
-                
-
-                <div style="display: flex; flex-direction: column;">
-                    <label for="yourPassword" class="form-label">Contraseña</label>
-                    <input placeholder="Ingrese su contraseña" class="form-control" id="yourPassword" required>
-
-                    <div >
-                        <i> Mostrar/ocultar contraseña </i>
-                    </div>
-
-
-                </div>
-
-                <div class="col-12">
-                    <button class="btn btn-primary w-100" type="submit">
-                        Login
-                    </button>
-                </div>
-                
-                    <p class="small mb-0 text-center">No tenes usuario?</p>
-                     <a  routerLink="/register"> Crea una cuenta nueva</a>
-                
-            <!-- </form>END Formulario de Inicio Sesion -->
+        <div class="title">
+            <app-label [text]="'Login'"></app-label>
 
         </div>
-    </div>
+        <app-divider></app-divider>
+        <app-label [text]="'Ingrese su usuario y contraseña para ingresar'"></app-label>
+        
+
+        <app-label [text]="'Usuario'"></app-label>
+        <app-text-input [placeholder]="'Ingrese su usuario'" (textInputEvent)="updateUserText($event)"></app-text-input>
 
 
+        <app-label [text]="'Contraseña'"></app-label>
+        <app-text-input [placeholder]="'Ingrese su contraseña'" (textInputEvent)="updatePasswordText($event)"></app-text-input>
 
-
-
-
-</main><!-- End #main -->
+        <button (click)="login()">
+            Login
+        </button>
+</div>

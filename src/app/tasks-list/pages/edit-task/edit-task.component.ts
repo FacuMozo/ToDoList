@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import Task from '../../task.model';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { TaskListService } from 'src/app/services/task-list.service';
 
 @Component({
@@ -11,20 +11,27 @@ import { TaskListService } from 'src/app/services/task-list.service';
 export class EditTaskComponent {
 
   public task! : Task  ;
+  private descriptionInput: string="";
+  private titleInput: string="";
+
 
   constructor (private route: ActivatedRoute, private taskListService : TaskListService, private router : Router ){
   
     
   }
   
+  
 	ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
+    
+
     const taskAux = this.taskListService.getTaskById(id);
     if (taskAux != null){
       this.task = taskAux;
+      this.descriptionInput = this.task.getDescription();
+      this.titleInput = this.task.getTitle();
     }
-    console.log("VIEW component data: "+ this.task);
-  
+    // console.log("ID: "+id+" VIEW component data: "+ this.task);
 	}
 
 
@@ -33,11 +40,7 @@ export class EditTaskComponent {
       this.router.navigateByUrl('/tasks');
 
   }
-  navigateEditTask() {
 
-      this.router.navigateByUrl('/tasks/'+this.task.getId()+'/edit');
-
-  }
 
 
   performCopy() {
@@ -49,6 +52,18 @@ export class EditTaskComponent {
 
   }
 
+  updateDescriptionText(textInput: string){
+    this.descriptionInput = textInput;
+  }
+  updateTitleText(textInput: string){
+    this.titleInput = textInput;
+  }
 
+  editTask(){
+    
+    const newTask : Task = new Task(this.titleInput, this.descriptionInput, this.task.getComplete(), this.task.getId());
+    this.taskListService.editTask(newTask);
+  }
 
+  
 }
