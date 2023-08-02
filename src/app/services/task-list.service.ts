@@ -15,7 +15,8 @@ export class TaskListService {
     // this.getTaskList();
     this.taskList=[]
     let data =  this.localStorageService.getData("tasks");
-    if (data != null){
+    if (data != ""){
+      
       let parsedData= JSON.parse(data);
       let taskArray : Task[] = [];
       for (let i = 0; i <parsedData.length ; i++){

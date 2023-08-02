@@ -10,7 +10,7 @@ import Task from '../../task.model';
 export class TaskListComponent {
 
   
-  taskList!: Task[];
+  taskList: Task[] = [];
   taskListService : TaskListService;
 
   constructor(taskListService : TaskListService ){
@@ -20,7 +20,14 @@ export class TaskListComponent {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this.taskList = this.taskListService.getTaskList();
+    try {
+      let data = this.taskListService.getTaskList();
+      if ( data != null){
+        this.taskList = data;
+      }
+    } catch (error) {
+      console.error('outer', error,"  ", error);
+    }
   }
   
   addTask(newTask : string){
