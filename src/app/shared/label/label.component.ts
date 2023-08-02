@@ -9,5 +9,6 @@ export class LabelComponent {
 
   @Input() text: string = '';
   @Input() tachadoBoolan: boolean = false;
+  @Input() pointerCursor: boolean = false;
 
 }

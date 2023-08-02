@@ -4,13 +4,10 @@ import { Injectable, OnInit } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class LocalStorageService implements OnInit {
+export class LocalStorageService {
 
   constructor() { }
 
-  ngOnInit(): void {
-      
-  }
 
   saveData(key : string, object : string ){
     window.localStorage.setItem(key, object);

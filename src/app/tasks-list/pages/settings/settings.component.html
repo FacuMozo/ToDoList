@@ -1,0 +1,13 @@
+<div class="settings"> 
+    
+    <app-label  [text]="'Configuracion'"> </app-label>
+    <app-divider></app-divider>
+    
+    <app-label  [text]="'Usuario: '+user"> </app-label>
+    <app-label  [text]="'Password: '+password"> </app-label>
+    
+
+    <div class="rowButtons">
+        <app-icon-button [icon]="'home'" (buttonEvent)="navigateHome()"></app-icon-button>
+    </div>
+</div>  

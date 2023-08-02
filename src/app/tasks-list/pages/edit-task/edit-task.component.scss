@@ -2,12 +2,12 @@
 
 .task-detail{
     display: flex;
-    width: 32rem;
     flex-flow: column;
+    width: 32rem;
     flex-wrap: wrap;
     margin: 0.5rem 0px;
     padding: 1rem;
-    justify-content: space-between;
+    
     align-items: flex-start;
     row-gap: 0.5rem;
     border-radius: 0.25rem;
@@ -28,7 +28,9 @@
         overflow-y: hidden;
         overflow-x: auto;
     }
-    
+    app-divider{
+        width: 100%;
+    }
     .row{
         display: flex;
         flex-direction: row;

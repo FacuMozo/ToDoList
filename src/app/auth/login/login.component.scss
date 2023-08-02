@@ -12,4 +12,10 @@
         align-self: center;
         font-family: "Roboto", sans-serif;
     }
+    .flex-end{
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+        column-gap: 0.5rem;
+    }
 }

@@ -1,9 +1,11 @@
 
     <ul>
         <li>
-            <h1> Lista de tareas App </h1>
+            <h1 ><a routerLink="/tasks">Lista de tareas App</a>  </h1>
         </li>
         <li>
             <app-icon-button [icon]="icon" (buttonEvent)="toggleFullscreen()"></app-icon-button>
+            <app-icon-button [icon]="'settings'" (buttonEvent)="redirectToSettings()"></app-icon-button>
+            <app-icon-button [icon]="'logout'" [text]="'logOut'" (buttonEvent)="logOut()"></app-icon-button>
         </li>
     </ul>

@@ -1,20 +1,22 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
+  private adminUser : string = 'user';
+  private adminPassword : string = '1234';
 
-
-  login(user: string, password: string) {
+  login(inputUser: string, inputPassword: string) {
     
     
-    if (user == 'admin' && password == '1234') {
-      sessionStorage.setItem('user', user);
-      sessionStorage.setItem('password', password);
+    if ( inputUser == this.adminUser && inputPassword == this.adminPassword) {
+      sessionStorage.setItem('user', this.adminUser);
+      sessionStorage.setItem('password', this.adminPassword);
       return true;
     }
     return false;
@@ -22,6 +24,7 @@ export class AuthenticationService {
 
   logout() {
     sessionStorage.clear();
+    this.router.navigateByUrl('/login');
   }
 
   isLoggedIn() {
@@ -31,6 +34,14 @@ export class AuthenticationService {
       return this.login(user, pass);
     }
     return false;
+  }
+
+  getUser(): string{
+    return this.adminUser;
+  }
+
+  getPassword(): string{
+    return this.adminPassword;
   }
 }
 

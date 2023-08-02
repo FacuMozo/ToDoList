@@ -15,7 +15,9 @@
         <app-label [text]="'Contraseña'"></app-label>
         <app-text-input [placeholder]="'Ingrese su contraseña'" (textInputEvent)="updatePasswordText($event)"></app-text-input>
 
-        <button (click)="login()">
-            Login
-        </button>
+        <div class="flex-end">
+            <app-icon-button [icon]="'login'" [text]="'Iniciar Sesion'" (buttonEvent)="login()"></app-icon-button>
+        </div>
+
+        
 </div>

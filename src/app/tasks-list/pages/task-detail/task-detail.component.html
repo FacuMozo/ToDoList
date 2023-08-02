@@ -1,13 +1,12 @@
 
 <div class="task-detail"> 
     
-    <!-- <h1>Title: {{this.task.title}}</h1>
-    <p>Completed: {{this.task.getComplete()}}</p>
-    <p>Id: {{this.task.getId()}}</p> -->
+    <app-label  [text]="'Detalle de Tarea:'"> </app-label>
+    <app-divider></app-divider>
     <app-label  [text]="'Title: '+this.task.getTitle()"> </app-label>
     <app-label  [text]="'Completed: '+this.task.getComplete()"  > </app-label>
-    <app-label  [text]="'Description: '+this.task.getDescription()"  > </app-label>
     <app-label  [text]="'Task ID: '+this.task.getId()" > </app-label>
+    <app-label  [text]="'Description: '+this.task.getDescription()"  > </app-label>
     
 
     <div class="row">

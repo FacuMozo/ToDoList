@@ -5,7 +5,7 @@ import { LocalStorageService } from './local-storage.service';
 @Injectable({
   providedIn: 'root'
 })
-export class TaskListService implements OnInit{
+export class TaskListService {
 
   taskList! : Task[] ;
 
@@ -27,15 +27,8 @@ export class TaskListService implements OnInit{
         Task.setLastId(this.findLastId());
       }
     }
-    console.log("TASADAA "+this.taskList)
   }
   
-  ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    
-    // this.getTaskList();
-  }
   
   getTaskList() : Task[]{
     // let data =  this.localStorageService.getData("tasks");

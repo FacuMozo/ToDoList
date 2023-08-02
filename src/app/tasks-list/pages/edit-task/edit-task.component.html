@@ -1,8 +1,8 @@
 <div class="task-detail"> 
     
-    <!-- <h1>Title: {{this.task.title}}</h1>
-    <p>Completed: {{this.task.getComplete()}}</p>
-    <p>Id: {{this.task.getId()}}</p> -->
+    <app-label  [text]="'Edicion de Tarea:'"> </app-label>
+    <app-divider></app-divider>
+    
     <div class="row">
         <app-label  [text]="'Title:'"> </app-label>
         <app-text-input [value]="this.task.getTitle()" (textInputEvent)="updateTitleText($event)"></app-text-input>

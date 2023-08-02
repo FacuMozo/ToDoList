@@ -4,13 +4,15 @@
 .tachado {
     text-decoration: line-through;  
 }
+.pointer-cursor {
+    cursor: pointer;
+}
 
 label{
     flex-grow: 1;
     font-size: 1.5rem;
     margin-top: 0;
-    margin-bottom: 0;
-    
+    margin-bottom: 0;  
     
     
     @media (prefers-color-scheme: light) {

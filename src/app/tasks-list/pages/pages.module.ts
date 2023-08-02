@@ -7,6 +7,7 @@ import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TasksListModule } from '../tasks-list.module';
+import { SettingsComponent } from './settings/settings.component';
 
 
 
@@ -15,7 +16,8 @@ import { TasksListModule } from '../tasks-list.module';
   declarations: [
     EditTaskComponent,
     TaskDetailComponent,
-    TaskListComponent
+    TaskListComponent,
+    SettingsComponent
   ],
   imports: [
     CommonModule,

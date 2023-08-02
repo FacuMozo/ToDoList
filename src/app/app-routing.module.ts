@@ -8,6 +8,7 @@ import { EditTaskComponent } from './tasks-list/pages/edit-task/edit-task.compon
 import { PageNotFoundComponent } from './auth/page-not-found/page-not-found.component';
 import { loggedGuard } from './guards/logged.guard';
 import { TaskListComponent } from './tasks-list/pages/task-list/task-list.component';
+import { SettingsComponent } from './tasks-list/pages/settings/settings.component';
 
 const routes: Routes = [
   // { path: 'tasks', component: TasksListComponent, pathMatch: 'full' },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'tasks', component: TasksListComponent, canActivate: [loggedGuard],children:[
     
     { path: '', component: TaskListComponent },
+    { path: 'settings', component: SettingsComponent },
     { path: ':id', component: TaskDetailComponent },
     { path: ':id/edit', component: EditTaskComponent },
   ] },

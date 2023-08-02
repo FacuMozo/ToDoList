@@ -1,3 +1,5 @@
 <button  type="button" (click)="buttonAction()" >
-    <img src="{{assetsUrl}}{{icon}}.svg" alt="{{icon}}">    
+    <img *ngIf="displayIcon" src="{{assetsUrl}}{{icon}}.svg" alt="{{icon}}">  
+    
+    <div *ngIf="displayText" class="text">{{this.text}}</div>
 </button>

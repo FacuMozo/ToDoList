@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthenticationService } from '../../services/authentication.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +12,17 @@ export class NavbarComponent {
     icon = "fullscreen";
 
     fullscreen: boolean = false;
-    
+
+  constructor(private router: Router, private authenticationService: AuthenticationService){}
+
+  logOut(){
+    this.authenticationService.logout();
+  }
+  redirectToSettings(){
+    this.router.navigateByUrl('/tasks/settings');
+
+  }
+  
     toggleFullscreen(){
       if(document.fullscreenEnabled){
         let elem = document.documentElement;
