@@ -9,6 +9,7 @@ import { TaskListService } from './services/task-list.service';
 import { LocalStorageService } from './services/local-storage.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AuthModule } from './auth/auth.module';
     CoreModuleModule,
     TasksListModule,
     AppRoutingModule,
-    AuthModule
+    AuthModule,
+    RouterModule
   ],
   providers: [ 
     TaskListService,

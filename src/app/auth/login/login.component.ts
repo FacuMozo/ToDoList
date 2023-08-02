@@ -14,11 +14,14 @@ constructor(private authenticationService :AuthenticationService,private router:
   
   private user:string="";
   private password:string="";
+  wrongLogin:boolean = false;
+
 
   login(){
     if( this.authenticationService.login(this.user,this.password)){
       this.router.navigate(['/tasks']);
     }else{
+      this.wrongLogin = true;
       console.log("WRONG USER OR PASSWORD")
     }
   }
