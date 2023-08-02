@@ -21,7 +21,7 @@ constructor(private authenticationService :AuthenticationService,private router:
     if( this.authenticationService.login(this.user,this.password)){
       console.log("correct USER OR PASSWORD, redirect")
 
-      this.router.navigate(['/tasks']);
+      this.router.navigateByUrl('/tasks');
     }else{
       this.wrongLogin = true;
       console.log("WRONG USER OR PASSWORD")
