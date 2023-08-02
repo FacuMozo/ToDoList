@@ -11,8 +11,6 @@ import { TaskListComponent } from './tasks-list/pages/task-list/task-list.compon
 import { SettingsComponent } from './tasks-list/pages/settings/settings.component';
 
 const routes: Routes = [
-  // { path: 'tasks', component: TasksListComponent, pathMatch: 'full' },
-  // { path: '', component: TasksListComponent },
   { path: '', redirectTo:'/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
@@ -35,9 +33,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,  {
-    useHash: true
-  })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
