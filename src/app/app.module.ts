@@ -7,9 +7,9 @@ import { SharedModule } from './shared/shared.module';
 import { TasksListModule } from './tasks-list/tasks-list.module';
 import { TaskListService } from './services/task-list.service';
 import { LocalStorageService } from './services/local-storage.service';
-import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
 import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
